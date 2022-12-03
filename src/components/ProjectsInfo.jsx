@@ -4,29 +4,29 @@ export default class ProjectsInfo extends Component {
   render() {
     return (
         <form>
-          <label htmlFor='project'>
-            <p>Titulo do projeto: </p>
+          <label htmlFor='project'> Projeto: </label>
             <input 
-            name='project'
-            id='project'
-            type="text" />
-          </label>
-          <label htmlFor='projectDescription'>
-            <p>Descrição breve do projeto: </p>
+              name='project'
+              id='project'
+              type="text" 
+            />
+
+          <label htmlFor='projectDescription'> Descrição </label>
             <textarea
-            maxLength={70}
-            name='projectDescription'
-            id='projectDescription'
-            type="text" />
-          </label>
-          <label htmlFor='projectTasks'>
-            <p>Tarefas realizadas no desenvolvimento do projeto: </p>
+              maxLength={70}
+              name='projectDescription'
+              id='projectDescription'
+              type="text" 
+            />
+
+          <label htmlFor='projectTasks'> Tarefas realizadas </label>
             <textarea
-            maxLength={120}
-            name='projectTasks'
-            id='projectTasks'
-            type="text" />
-          </label>
+              maxLength={120}
+              name='projectTasks'
+              id='projectTasks'
+              type="text" 
+            />
+
         </form>
     )
   }

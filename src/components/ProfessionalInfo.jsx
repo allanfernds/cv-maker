@@ -5,26 +5,23 @@ export default class ProfessionalInfo extends Component {
     return (
       <form>
         ProfessionalInfo
-        <label htmlFor='company'>
-          <p>Empresa: </p>
+        <label htmlFor='company'> Empresa </label>
           <input 
             id='company'
             name='company'
             type="text" 
             required
           />
-        </label>
-        <label htmlFor='office'>
-          <p>Cargo: </p>
+        
+        <label htmlFor='office'> Cargo </label>
           <input 
             id='office'
             name='office'
             type="text" 
             required
           />
-        </label>
-        <label htmlFor='tasks'>
-          <p>Tarefa Realizada: </p>
+        
+        <label htmlFor='tasks'> Tarefa realizada </label>
           <textarea
             maxLength={80} 
             id='tasks'
@@ -32,25 +29,23 @@ export default class ProfessionalInfo extends Component {
             type="text" 
             required
           />
-        </label>
-        <label htmlFor='initialDate'>
-          <p>Data inicial: </p>
+        
+        <label htmlFor='initialDate'> Início </label>
           <input 
             id='initialDate'
             name='initialDate'
             type="date" 
             required
           />
-        </label>
-        <label htmlFor='finalDate'>
-          <p>Data Final: </p>
+        
+        <label htmlFor='finalDate'> Fim </label>
           <input 
             id='finalDate'
             name='finalDate'
             type="date" 
             required
           />
-        </label>
+        
       </form>
     )
   }

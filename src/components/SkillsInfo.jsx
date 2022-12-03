@@ -5,14 +5,13 @@ export default class SkillsInfo extends Component {
     return (
       <div>
         SkillsInfo
-        <label htmlFor='programmingLang'>
-            <p>Linguagem de programação: </p>
+        <label htmlFor='programmingLang'>Linguagem de programação: </label>
             <input
               name='programmingLang'
               id='programmingLang'
               type="text" 
             />
-        </label>
+ 
         <label htmlFor='experienceYears'>Experiencia: </label>
           <select id='experienceYears'name="experienceYears">
             <option>Menos de 1 ano</option>

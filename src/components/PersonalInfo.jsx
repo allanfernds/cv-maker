@@ -4,7 +4,6 @@ export default class PersonalInfo extends Component {
   render() {
     return (
       <form>
-        <h3>Dado Pessoais</h3>
         <label htmlFor='firstName'> Nome: </label>
           <input 
             id='firstName'
