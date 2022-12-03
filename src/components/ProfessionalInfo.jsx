@@ -5,11 +5,11 @@ export default class ProfessionalInfo extends Component {
     return (
       <form>
         ProfessionalInfo
-        <label htmlFor='institution'>
-          <p>Instituição: </p>
+        <label htmlFor='company'>
+          <p>Empresa: </p>
           <input 
-            id='institution'
-            name='institution'
+            id='company'
+            name='company'
             type="text" 
             required
           />
