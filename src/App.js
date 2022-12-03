@@ -11,11 +11,11 @@ export default class App extends Component {
   render() {
     return (
       <Switch>
-        <Route exact to='/' component={ PersonalForm } />
-        <Route to='/educationalform' component={ EducationalForm } />
-        <Route to='/professionalform' component={ ProfessionalForm } />
-        <Route to='/projectsform' component={ ProjectsForm } />
-        <Route to='/skillsform' component={ SkillsForm } />
+        <Route exact path='/' component={ PersonalForm } />
+        <Route path='/educationalform' component={ EducationalForm } />
+        <Route path='/professionalform' component={ ProfessionalForm } />
+        <Route path='/projectsform' component={ ProjectsForm } />
+        <Route path='/skillsform' component={ SkillsForm } />
       </Switch>
     )
   }
