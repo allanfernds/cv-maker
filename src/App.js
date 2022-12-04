@@ -9,13 +9,13 @@ import SkillsInfo from './components/SkillsInfo'
 export default class App extends Component {
   render() {
     return (
-      <>
-      <PersonalInfo />
+      <main>
+      <PersonalInfo/>
       <EducationalInfo />
       <ProfessionalInfo />
       <ProjectsInfo />
       <SkillsInfo />
-      </>
+      </main>
     )
   }
 }
