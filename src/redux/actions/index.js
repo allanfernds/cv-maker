@@ -1,7 +1,7 @@
 // ACTIONS TYPES
-export const ADD_EMAIL = 'ADD_EMAIL';
+export const SAVE_INFO = 'SAVE_INFO';
 
 export const addEmail = (email) => ({
-  type: ADD_EMAIL,
+  type: SAVE_INFO,
   email,
 })
