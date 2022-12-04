@@ -1,5 +1,6 @@
-import { Connect } from 'react-redux'
+import { connect } from 'react-redux'
 import React, { Component } from 'react'
+import { SAVE_INFO } from '../redux/actions'
 
 class PersonalInfo extends Component {
   constructor() {
@@ -12,6 +13,13 @@ class PersonalInfo extends Component {
       github: '',
     }
   }
+
+  saveInfo = (event) => {
+    event.preventDefault()
+    const { dispatch } = this.props
+    dispatch(SAVE_INFO(this.state))
+  }
+
 
   handleChange = ({ target }) => {
     const { name, value } = target;
@@ -71,10 +79,16 @@ class PersonalInfo extends Component {
             onChange={this.handleChange}   
             required
           />
+          <button
+            type='submit'
+            onClick={this.saveInfo}
+          >
+            Salvar
+          </button>
       </form>
     )
   }
 }
 
 
-export default Connect()(PersonalInfo)
+export default connect()(PersonalInfo)
