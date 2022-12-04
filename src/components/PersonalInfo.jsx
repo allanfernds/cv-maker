@@ -1,14 +1,33 @@
 import React, { Component } from 'react'
 
 export default class PersonalInfo extends Component {
+  constructor() {
+    super()
+    this.state = {
+      firstName: '',
+      lastName: '',
+      tel: '',
+      email: '',
+      github: '',
+    }
+  }
+
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({ [name]: value });
+  }
+
   render() {
+    const { firstName, lastName, email, tel, github } = this.state
     return (
       <form>
         <label htmlFor='firstName'> Nome: </label>
           <input 
             id='firstName'
             name='firstName'
-            type="text" 
+            type="text"
+            value={firstName}
+            onChange={this.handleChange} 
             required
           />
         
@@ -17,6 +36,8 @@ export default class PersonalInfo extends Component {
             id='lastName'
             name='lastName'
             type="text" 
+            value={lastName}
+            onChange={this.handleChange}  
             required
           />
 
@@ -25,6 +46,18 @@ export default class PersonalInfo extends Component {
             id='email'
             name='email'
             type="email" 
+            value={email}
+            onChange={this.handleChange}  
+            required
+          />
+
+<label htmlFor='email'> GitHub: </label>
+          <input 
+            id='github'
+            name='github'
+            type="text" 
+            value={github}
+            onChange={this.handleChange}  
             required
           />
 
@@ -32,7 +65,9 @@ export default class PersonalInfo extends Component {
           <input 
             id='tel'
             name='tel'
-            type="tel" 
+            type="tel"
+            value={tel}
+            onChange={this.handleChange}   
             required
           />
       </form>

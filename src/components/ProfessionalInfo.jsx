@@ -1,7 +1,24 @@
 import React, { Component } from 'react'
 
 export default class ProfessionalInfo extends Component {
+  constructor() {
+    super()
+    this.state = {
+      company: '',
+      office: '',
+      tasks: '',
+      initialDate: '',
+      finalDate: '',
+    }
+  }
+
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({ [name]: value });
+  }
+
   render() {
+    const { company, office, tasks, initialDate, finalDate } = this.state
     return (
       <form>
         ProfessionalInfo
@@ -9,7 +26,9 @@ export default class ProfessionalInfo extends Component {
           <input 
             id='company'
             name='company'
-            type="text" 
+            type="text"
+            value={company}
+            onChange={this.handleChange}  
             required
           />
         
@@ -17,7 +36,9 @@ export default class ProfessionalInfo extends Component {
           <input 
             id='office'
             name='office'
-            type="text" 
+            type="text"
+            value={office}
+            onChange={this.handleChange} 
             required
           />
         
@@ -26,7 +47,9 @@ export default class ProfessionalInfo extends Component {
             maxLength={80} 
             id='tasks'
             name='tasks'
-            type="text" 
+            type="text"
+            value={tasks}
+            onChange={this.handleChange} 
             required
           />
         
@@ -34,7 +57,9 @@ export default class ProfessionalInfo extends Component {
           <input 
             id='initialDate'
             name='initialDate'
-            type="date" 
+            type="date"
+            value={initialDate}
+            onChange={this.handleChange} 
             required
           />
         
@@ -42,7 +67,9 @@ export default class ProfessionalInfo extends Component {
           <input 
             id='finalDate'
             name='finalDate'
-            type="date" 
+            type="date"
+            value={finalDate}
+            onChange={this.handleChange} 
             required
           />
         
