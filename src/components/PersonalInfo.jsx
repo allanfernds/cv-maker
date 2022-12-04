@@ -1,6 +1,7 @@
+import { Connect } from 'react-redux'
 import React, { Component } from 'react'
 
-export default class PersonalInfo extends Component {
+class PersonalInfo extends Component {
   constructor() {
     super()
     this.state = {
@@ -74,3 +75,6 @@ export default class PersonalInfo extends Component {
     )
   }
 }
+
+
+export default Connect()(PersonalInfo)
