@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { SAVE_INFO } from '../redux/actions'
-
+import { saveInfo } from '../redux/actions'
 class PersonalInfo extends Component {
   constructor() {
     super()
@@ -14,10 +13,10 @@ class PersonalInfo extends Component {
     }
   }
 
-  saveInfo = (event) => {
+  saveInfoOnStore = (event) => {
     event.preventDefault()
-    const { dispatch } = this.props
-    dispatch(SAVE_INFO(this.state))
+    const { dispatch } = this.props 
+    dispatch(saveInfo(this.state))
   }
 
 
@@ -81,7 +80,7 @@ class PersonalInfo extends Component {
           />
           <button
             type='submit'
-            onClick={this.saveInfo}
+            onClick={this.saveInfoOnStore}
           >
             Salvar
           </button>
