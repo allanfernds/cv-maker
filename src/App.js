@@ -15,36 +15,59 @@ export default class App extends Component {
       educationallform: [{section: ''}],
       professionalform: [{section: ''}],
       projectsform: [{section: ''}],
+      skillsform: [{section: ''}],
     }
   }
 
-  addNewFormSection = () => {
-    const { personalform } = this.state
-    personalform.push({section: ''});
-
-    this.setState({
-      personalform: personalform
-    });
+  addNewFormSection = ({target}) => {
+    console.log(target.name)
+    const { name } = target
+    this.setState(prevState => ({
+      [name]: [...prevState[name], {section: ''}]
+    }))
   }
 
   render() {
-    const { personalform } = this.state
+    const { personalform, educationallform, professionalform, projectsform, skillsform } = this.state
     return (
       <main>
 
         <div>
         {personalform.map((section, index) => <PersonalInfo key={index} /> )}
-          <button onClick={this.addNewFormSection}>
+          <button name={'personalform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
           </button>
         </div>
-        <div>
 
+        <div>
+        {educationallform.map((section, index) => <EducationalInfo key={index} /> )}
+          <button name={'educationallform'} onClick={this.addNewFormSection}>
+            Adicionar mais uma seção
+          </button>
         </div>
-      <EducationalInfo />
-      <ProfessionalInfo />
-      <ProjectsInfo />
-      <SkillsInfo />
+
+        <div>
+        {professionalform.map((section, index) => <ProfessionalInfo key={index} /> )}
+          <button name={'professionalform'} onClick={this.addNewFormSection}>
+            Adicionar mais uma seção
+          </button>
+        </div>
+
+        <div>
+        {projectsform.map((section, index) => <ProjectsInfo key={index} /> )}
+          <button name={'projectsform'} onClick={this.addNewFormSection}>
+            Adicionar mais uma seção
+          </button>
+        </div>
+
+        <div>
+        {skillsform.map((section, index) => <SkillsInfo key={index} /> )}
+          <button name={'skillsform'} onClick={this.addNewFormSection}>
+            Adicionar mais uma seção
+          </button>
+        </div>
+
+
       </main>
     )
   }
