@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { SAVE_PERSONAL_INFO } from '../actions';
-import { SAVE_EDUCATIONAL_INFO } from '../actions';
+import { SAVE_PERSONAL_INFO, SAVE_EDUCATIONAL_INFO, SAVE_PROFESSIONAL_INFO, SAVE_PROJECTS_INFO, SAVE_SKILLS_INFO   } from '../actions';
+
 
 
 const INITIAL_STATE = {
@@ -19,6 +19,28 @@ const INITIAL_STATE = {
         course: '',
         initialDate: '',
         finalDate: '',
+      }],
+    
+    professionalInfo: [ 
+      {
+        company: '',
+        office: '',
+        tasks: '',
+        initialDate: '',
+        finalDate: '',
+      }],
+    
+    projectsInfo: [ 
+      {
+        projectName: '',
+        projectDescription: '',
+        projectTasks: '',
+      }],
+
+    skillsInfo: [ 
+      {
+        programmingLang: '',
+        experienceTime: '', 
       }],
 };
 
@@ -40,6 +62,27 @@ const userInfo = (state = INITIAL_STATE, action) => {
           action.info
         ]
       }
+      case SAVE_PROFESSIONAL_INFO:
+        return {
+          ...state,
+          professionalInfo: [
+            action.info
+          ]
+        }
+      case SAVE_PROJECTS_INFO:
+        return {
+          ...state,
+          projectsInfo: [
+            action.info
+          ]
+        }
+      case SAVE_SKILLS_INFO:
+        return {
+          ...state,
+          skillsInfo: [
+            action.info
+          ]
+        }
     default:
       return state;
   }
