@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { saveEducationalInfo } from '../redux/actions';
 
-export default class EducationalInfo extends Component {
+class EducationalInfo extends Component {
   constructor() {
     super()
     this.state = {
@@ -14,6 +16,12 @@ export default class EducationalInfo extends Component {
   handleChange = ({ target }) => {
     const { name, value } = target;
     this.setState({ [name]: value });
+  }
+
+  saveInfoOnStore = (event) => {
+    event.preventDefault()
+    const { dispatch } = this.props 
+    dispatch(saveEducationalInfo(this.state))
   }
 
   render() {
@@ -59,8 +67,13 @@ export default class EducationalInfo extends Component {
           value={finalDate}
           required
         />
-      
+      <button
+        type='submit'
+        onClick={this.saveInfoOnStore}
+      >Salvar</button>
     </form>
     )
   }
 }
+
+export default connect()(EducationalInfo)

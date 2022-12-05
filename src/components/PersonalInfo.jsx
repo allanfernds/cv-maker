@@ -59,7 +59,7 @@ class PersonalInfo extends Component {
             required
           />
 
-<label htmlFor='email'> GitHub: </label>
+        <label htmlFor='email'> GitHub: </label>
           <input 
             id='github'
             name='github'
