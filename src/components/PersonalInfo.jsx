@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { saveInfo } from '../redux/actions'
+import { savePersonalInfo } from '../redux/actions'
 class PersonalInfo extends Component {
   constructor() {
     super()
@@ -16,7 +16,7 @@ class PersonalInfo extends Component {
   saveInfoOnStore = (event) => {
     event.preventDefault()
     const { dispatch } = this.props 
-    dispatch(saveInfo(this.state))
+    dispatch(savePersonalInfo(this.state))
   }
 
 
