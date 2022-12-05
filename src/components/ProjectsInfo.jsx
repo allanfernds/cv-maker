@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { saveProjectsInfo } from '../redux/actions';
-import SkillsInfo from './SkillsInfo';
 
 class ProjectsInfo extends Component {
   constructor() {
