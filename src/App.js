@@ -1,12 +1,13 @@
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import EducationalInfo from './components/EducationalInfo'
 import PersonalInfo from './components/PersonalInfo'
 import ProfessionalInfo from './components/ProfessionalInfo'
 import ProjectsInfo from './components/ProjectsInfo'
 import SkillsInfo from './components/SkillsInfo'
 
-export default class App extends Component {
+class App extends Component {
   constructor() {
     super()
 
@@ -25,6 +26,7 @@ export default class App extends Component {
     this.setState(prevState => ({
       [name]: [...prevState[name], {section: ''}]
     }))
+    console.log(this.props)
   }
 
   render() {
@@ -72,3 +74,10 @@ export default class App extends Component {
     )
   }
 }
+
+
+const mapStateToProps = (state) => ({
+    ...state
+})
+
+export default connect(mapStateToProps)(App)

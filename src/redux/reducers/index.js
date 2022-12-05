@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     personalInfo: [],
     educationalInfo: [],  
     professionalInfo: [],   
-    projectsInfo: [ ],
+    projectsInfo: [],
     skillsInfo: [],
 };
 
@@ -15,7 +15,6 @@ const userInfo = (state = INITIAL_STATE, action) => {
   
   switch(action.type) {
     case SAVE_PERSONAL_INFO:
-      console.log(action.info)
       return {
         ...state,
         personalInfo: [
