@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { saveSkillsInfo } from '../redux/actions';
 
-export default class SkillsInfo extends Component {
+class SkillsInfo extends Component {
   constructor() {
     super()
     this.state = {
@@ -13,6 +15,13 @@ export default class SkillsInfo extends Component {
     const { name, value } = target;
     this.setState({ [name]: value });
   }
+
+  saveInfoOnStore = (event) => {
+    event.preventDefault()
+    const { dispatch } = this.props 
+    dispatch(saveSkillsInfo(this.state))
+  }
+
 
   render() {
     const { programmingLang, experienceTime } = this.state
@@ -43,7 +52,16 @@ export default class SkillsInfo extends Component {
             <option>4 a 5 anos</option>
             <option>Mais de 5 anos</option>
           </select>
+
+          <button
+            type='submit'
+            onClick={this.saveInfoOnStore}
+          >
+          Salvar
+        </button>
       </form>
     )
   }
 }
+
+export default connect()(SkillsInfo)
