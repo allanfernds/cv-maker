@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { saveProjectsInfo } from '../redux/actions';
+import SkillsInfo from './SkillsInfo';
 
-export default class ProjectsInfo extends Component {
+class ProjectsInfo extends Component {
   constructor() {
     super()
     this.state = {
@@ -14,6 +17,14 @@ export default class ProjectsInfo extends Component {
     const { name, value } = target;
     this.setState({ [name]: value });
   }
+
+  saveInfoOnStore = (event) => {
+    event.preventDefault()
+    const { dispatch } = this.props 
+    dispatch(saveProjectsInfo(this.state))
+  }
+
+
   render() {
     const { projectName, projectDescription, projectTasks } = this.state
     return (
@@ -49,8 +60,15 @@ export default class ProjectsInfo extends Component {
               onChange={this.handleChange}
               required  
             />
-
+          <button
+            type='submit'
+            onClick={this.saveInfoOnStore}
+          >
+          Salvar
+        </button>
         </form>
     )
   }
 }
+
+export default connect()(ProjectsInfo)

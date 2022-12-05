@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { saveProfessionalInfo } from '../redux/actions';
 
-export default class ProfessionalInfo extends Component {
+class ProfessionalInfo extends Component {
   constructor() {
     super()
     this.state = {
@@ -16,6 +18,14 @@ export default class ProfessionalInfo extends Component {
     const { name, value } = target;
     this.setState({ [name]: value });
   }
+
+
+  saveInfoOnStore = (event) => {
+    event.preventDefault()
+    const { dispatch } = this.props 
+    dispatch(saveProfessionalInfo(this.state))
+  }
+
 
   render() {
     const { company, office, tasks, initialDate, finalDate } = this.state
@@ -72,16 +82,15 @@ export default class ProfessionalInfo extends Component {
             onChange={this.handleChange} 
             required
           />
-        
+        <button
+          type='submit'
+          onClick={this.saveInfoOnStore}
+        >
+          Salvar
+        </button>
       </form>
     )
   }
 }
 
-
-// 3.  Informações Profiossionais:
-// 		Empresa,
-// 		Cargo,
-// 		Terefas Realizadas,
-// 		Data de inicio, 
-// 		Data do fim,
+export default connect()(ProfessionalInfo)
