@@ -83,6 +83,32 @@ const generatePDF = (data) => {
     ]
     ))
 
+    const projectsMap = data.projectsInfo.map((info) => (
+      [
+        {text: info.projectName, 
+          fontSize: 12, 
+          alignment: 'left', 
+          bold: true, 
+          margin: [15, 0, 0, 0]
+        },
+        {
+          text: info.projectDescription,
+          color: 'gray', 
+          fontSize: 11,
+          alignment: 'left',
+          margin: [15, 0, 15, 0]
+        },
+        {
+          text: info.projectTasks, 
+          color: 'gray', 
+          fontSize: 11,
+          italics: true,
+          alignment: 'left',
+          margin: [25, 3],
+        }
+    ]
+    ))
+
     const personalSection = [
             {columns:[
       {
@@ -127,7 +153,16 @@ const generatePDF = (data) => {
       ...professionalMap
     ];
 
-    const projectsSection = [];
+    const projectsSection = [
+      {
+        text: 'PRINCIPAIS PROJETOS________________________________________________________',
+        fontSize: 15,
+        alignment: 'left',
+        bold: true,
+        margin: [15, 15, 5, 15],
+      },
+      ...projectsMap
+    ];
 
     const skillsSection = [];
 
