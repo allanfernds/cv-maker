@@ -82,6 +82,7 @@ class ProfessionalInfo extends Component {
             required
           />
         <button
+          className='save-btn'
           type='submit'
           onClick={this.saveInfoOnStore}
         >

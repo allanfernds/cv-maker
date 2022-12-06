@@ -68,6 +68,7 @@ class EducationalInfo extends Component {
           required
         />
       <button
+        className='save-btn'
         type='submit'
         onClick={this.saveInfoOnStore}
       >Salvar</button>

@@ -53,6 +53,7 @@ class SkillsInfo extends Component {
           </select>
 
           <button
+            className='save-btn'
             type='submit'
             onClick={this.saveInfoOnStore}
           >

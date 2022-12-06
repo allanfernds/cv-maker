@@ -44,7 +44,9 @@ class App extends Component {
         <div>
         <h3>Formação</h3>
         {educationallform.map((section, index) => <EducationalInfo key={index} /> )}
-          <button name={'educationallform'} onClick={this.addNewFormSection}>
+          <button 
+            className='add-more-section-btn'
+           name={'educationallform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
           </button>
         </div>
@@ -52,7 +54,9 @@ class App extends Component {
         <div>
         <h3>Experiência</h3>
         {professionalform.map((section, index) => <ProfessionalInfo key={index} /> )}
-          <button name={'professionalform'} onClick={this.addNewFormSection}>
+          <button 
+            className='add-more-section-btn'
+            name={'professionalform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
           </button>
         </div>
@@ -60,7 +64,9 @@ class App extends Component {
         <div>
         <h3>Principais projetos</h3>
         {projectsform.map((section, index) => <ProjectsInfo key={index} /> )}
-          <button name={'projectsform'} onClick={this.addNewFormSection}>
+          <button
+            className='add-more-section-btn'
+            name={'projectsform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
           </button>
         </div>
@@ -68,7 +74,9 @@ class App extends Component {
         <div>
         <h3>Hard skills</h3>
         {skillsform.map((section, index) => <SkillsInfo key={index} /> )}
-          <button name={'skillsform'} onClick={this.addNewFormSection}>
+          <button 
+            className='add-more-section-btn'
+            name={'skillsform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
           </button>
         </div>

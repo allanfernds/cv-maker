@@ -12,13 +12,41 @@ code {
     monospace;
 }
 
-form {
-  border: 1px solid grey;
-  margin: 10px;
-  padding: 20px;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  padding: 3px;
-  margin: 3px 10px;
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 100vh;
+  margin: 10px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 9px 30px 0px rgba(51, 51, 50, 0.45);
+  -moz-box-shadow: 0px 9px 30px 0px rgba(51, 51, 50, 0.45);
+  box-shadow: 0px 9px 30px 0px rgba(51, 51, 50, 0.45);
+}
+
+input {
+  padding: 7px;
+  width: 30rem;
+  margin: 0 0 10px 0;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.add-more-section-btn {
+  padding: 5px;
+  border: 1px solid white;
+  background-color: #32DE8A;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  width: 200px;
 }
