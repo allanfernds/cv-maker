@@ -46,21 +46,22 @@ class DevCvMakerForm extends Component {
         <div>
           <h3>Sobre você</h3>
         <PersonalInfo />
+        <br />
         </div>
         
         <div>
         <h3>Formação</h3>
         {educationallform.map((section, index) => <EducationalInfo key={index} /> )}
-          <div>
+          <div className='btn-section'>
           <button 
             className='add-more-section-btn'
             name={'educationallform'} onClick={this.addNewFormSection}>
-            +
+            Adicionar mai uma seção
           </button>
           <button 
             className='remove-btn'
             name={'educationallform'} onClick={this.removeFormSection}>
-            x
+            Remover seção acima
           </button>
           </div>
           <br/>
@@ -69,16 +70,16 @@ class DevCvMakerForm extends Component {
         <div>
         <h3>Experiência</h3>
         {professionalform.map((section, index) => <ProfessionalInfo key={index} /> )}
-        <div>
+        <div className='btn-section'>
           <button 
             className='add-more-section-btn'
             name={'professionalform'} onClick={this.addNewFormSection}>
-            +
+            Adicionar mai uma seção
           </button>
           <button 
             className='remove-btn'
             name={'professionalform'} onClick={this.removeFormSection}>
-            x
+            Remover seção acima
           </button>
           </div>
           <br/>
@@ -87,16 +88,16 @@ class DevCvMakerForm extends Component {
         <div>
         <h3>Principais projetos</h3>
         {projectsform.map((section, index) => <ProjectsInfo key={index} /> )}
-        <div>
+        <div className='btn-section'>
           <button 
             className='add-more-section-btn'
             name={'projectsform'} onClick={this.addNewFormSection}>
-            +
+            Adicionar mai uma seção
           </button>
           <button 
             className='remove-btn'
             name={'projectsform'} onClick={this.removeFormSection}>
-            x
+            Remover seção acima
           </button>
           </div>
           <br/>
@@ -105,22 +106,23 @@ class DevCvMakerForm extends Component {
         <div>
         <h3>Hard skills</h3>
         {skillsform.map((section, index) => <SkillsInfo key={index} /> )}
-        <div>
+        <div className='btn-section'>
           <button 
             className='add-more-section-btn'
             name={'skillsform'} onClick={this.addNewFormSection}>
-            +
+            Adicionar mai uma seção
           </button>
           <button 
             className='remove-btn'
             name={'skillsform'} onClick={this.removeFormSection}>
-            x
+            Remover seção acima
           </button>
           </div>
           <br/>
         </div>
 
       <button
+      className='generatepdf-btn'
       onClick={() => generatePDF(userInfo)}
       >Gerar PDF</button>
       </main>
