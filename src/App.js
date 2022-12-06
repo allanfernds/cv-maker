@@ -32,18 +32,17 @@ class App extends Component {
 
   render() {
     const { userInfo } = this.props
-    const { personalform, educationallform, professionalform, projectsform, skillsform } = this.state
+    const { educationallform, professionalform, projectsform, skillsform } = this.state
     return (
       <main>
 
         <div>
-        {personalform.map((section, index) => <PersonalInfo key={index} /> )}
-          <button name={'personalform'} onClick={this.addNewFormSection}>
-            Adicionar mais uma seção
-          </button>
+          <h3>Sobre você</h3>
+        <PersonalInfo />
         </div>
 
         <div>
+        <h3>Formação</h3>
         {educationallform.map((section, index) => <EducationalInfo key={index} /> )}
           <button name={'educationallform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
@@ -51,6 +50,7 @@ class App extends Component {
         </div>
 
         <div>
+        <h3>Experiência</h3>
         {professionalform.map((section, index) => <ProfessionalInfo key={index} /> )}
           <button name={'professionalform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
@@ -58,6 +58,7 @@ class App extends Component {
         </div>
 
         <div>
+        <h3>Principais projetos</h3>
         {projectsform.map((section, index) => <ProjectsInfo key={index} /> )}
           <button name={'projectsform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção
@@ -65,6 +66,7 @@ class App extends Component {
         </div>
 
         <div>
+        <h3>Hard skills</h3>
         {skillsform.map((section, index) => <SkillsInfo key={index} /> )}
           <button name={'skillsform'} onClick={this.addNewFormSection}>
             Adicionar mais uma seção

@@ -31,7 +31,6 @@ class ProfessionalInfo extends Component {
     const { company, office, tasks, initialDate, finalDate } = this.state
     return (
       <form>
-        ProfessionalInfo
         <label htmlFor='company'> Empresa </label>
           <input 
             id='company'
