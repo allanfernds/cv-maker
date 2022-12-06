@@ -38,7 +38,7 @@ class ProjectsInfo extends Component {
               required   
             />
 
-          <label htmlFor='projectDescription'> Descrição </label>
+          <label htmlFor='projectDescription'> Descrição: </label>
             <textarea
               maxLength={70}
               name='projectDescription'
@@ -49,7 +49,7 @@ class ProjectsInfo extends Component {
               required  
             />
 
-          <label htmlFor='projectTasks'> Tarefas realizadas </label>
+          <label htmlFor='projectTasks'> Tarefa realizada: </label>
             <textarea
               maxLength={120}
               name='projectTasks'

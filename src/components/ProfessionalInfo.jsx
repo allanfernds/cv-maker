@@ -31,7 +31,7 @@ class ProfessionalInfo extends Component {
     const { company, office, tasks, initialDate, finalDate } = this.state
     return (
       <form>
-        <label htmlFor='company'> Empresa </label>
+        <label htmlFor='company'> Empresa: </label>
           <input 
             id='company'
             name='company'
@@ -41,7 +41,7 @@ class ProfessionalInfo extends Component {
             required
           />
         
-        <label htmlFor='office'> Cargo </label>
+        <label htmlFor='office'> Cargo: </label>
           <input 
             id='office'
             name='office'
@@ -51,7 +51,7 @@ class ProfessionalInfo extends Component {
             required
           />
         
-        <label htmlFor='tasks'> Tarefa realizada </label>
+        <label htmlFor='tasks'> Tarefa realizada: </label>
           <textarea
             maxLength={80} 
             id='tasks'
@@ -62,7 +62,7 @@ class ProfessionalInfo extends Component {
             required
           />
         
-        <label htmlFor='initialDate'> Início </label>
+        <label htmlFor='initialDate'> Início: </label>
           <input 
             id='initialDate'
             name='initialDate'
@@ -72,7 +72,7 @@ class ProfessionalInfo extends Component {
             required
           />
         
-        <label htmlFor='finalDate'> Fim </label>
+        <label htmlFor='finalDate'> Fim: </label>
           <input 
             id='finalDate'
             name='finalDate'

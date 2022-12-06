@@ -56,7 +56,7 @@ class DevCvMakerForm extends Component {
           <button 
             className='add-more-section-btn'
             name={'educationallform'} onClick={this.addNewFormSection}>
-            Adicionar mai uma seção
+            Adicionar mais uma seção
           </button>
           <button 
             className='remove-btn'
@@ -74,7 +74,7 @@ class DevCvMakerForm extends Component {
           <button 
             className='add-more-section-btn'
             name={'professionalform'} onClick={this.addNewFormSection}>
-            Adicionar mai uma seção
+            Adicionar mais uma seção
           </button>
           <button 
             className='remove-btn'
@@ -92,7 +92,7 @@ class DevCvMakerForm extends Component {
           <button 
             className='add-more-section-btn'
             name={'projectsform'} onClick={this.addNewFormSection}>
-            Adicionar mai uma seção
+            Adicionar mais uma seção
           </button>
           <button 
             className='remove-btn'
@@ -104,13 +104,13 @@ class DevCvMakerForm extends Component {
         </div>
 
         <div>
-        <h3>Hard skills</h3>
+        <h3>Aptidões</h3>
         {skillsform.map((section, index) => <SkillsInfo key={index} /> )}
         <div className='btn-section'>
           <button 
             className='add-more-section-btn'
             name={'skillsform'} onClick={this.addNewFormSection}>
-            Adicionar mai uma seção
+            Adicionar mais uma seção
           </button>
           <button 
             className='remove-btn'

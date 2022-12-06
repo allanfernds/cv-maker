@@ -27,8 +27,9 @@ class SkillsInfo extends Component {
     const { programmingLang, experienceTime } = this.state
     return (
       <form>
-        <label htmlFor='programmingLang'>Linguagem de programação: </label>
+        <label htmlFor='programmingLang'>Aptidão: </label>
             <input
+              placeholder='Python, Photoshop, Word...'
               name='programmingLang'
               id='programmingLang'
               type="text"              

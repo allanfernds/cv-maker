@@ -28,7 +28,7 @@ class EducationalInfo extends Component {
     const { institution, course, initialDate, finalDate } = this.state
     return (
       <form>
-      <label htmlFor='institution'> Instituição </label>
+      <label htmlFor='institution'> Instituição: </label>
         <input 
           id='institution'
           name='institution'
@@ -38,7 +38,7 @@ class EducationalInfo extends Component {
           required
         />
       
-      <label htmlFor='course'> Curso </label>
+      <label htmlFor='course'> Curso: </label>
         <input 
           id='course'
           name='course'
@@ -48,7 +48,7 @@ class EducationalInfo extends Component {
           required
         />
       
-      <label htmlFor='initialDate'> Inicio </label>
+      <label htmlFor='initialDate'> Inicio: </label>
         <input 
           id='initialDate'
           name='initialDate'
@@ -58,7 +58,7 @@ class EducationalInfo extends Component {
           required
         />
       
-      <label htmlFor='finalDate'> Fim </label>
+      <label htmlFor='finalDate'> Fim: </label>
         <input 
           id='finalDate'
           name='finalDate'
