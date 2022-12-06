@@ -4,61 +4,34 @@ import { SAVE_PERSONAL_INFO, SAVE_EDUCATIONAL_INFO, SAVE_PROFESSIONAL_INFO, SAVE
 
 
 const INITIAL_STATE = {
-    personalInfo: [ 
-    {
+    personalInfo: {
       firstName: '',
       lastName: '',
       tel: '',
       email: '',
-      github: ''
-    }],
-
-    educationalInfo: [ 
-      {
-        institution: '',
-        course: '',
-        initialDate: '',
-        finalDate: '',
-      }],
-    
-    professionalInfo: [ 
-      {
-        company: '',
-        office: '',
-        tasks: '',
-        initialDate: '',
-        finalDate: '',
-      }],
-    
-    projectsInfo: [ 
-      {
-        projectName: '',
-        projectDescription: '',
-        projectTasks: '',
-      }],
-
-    skillsInfo: [ 
-      {
-        programmingLang: '',
-        experienceTime: '', 
-      }],
+      github: '',
+    },
+    educationalInfo: [],  
+    professionalInfo: [],   
+    projectsInfo: [],
+    skillsInfo: [],
 };
 
 const userInfo = (state = INITIAL_STATE, action) => {
   
   switch(action.type) {
     case SAVE_PERSONAL_INFO:
-      console.log(action.info)
       return {
         ...state,
-        personalInfo: [
-          action.info
-        ]
+        personalInfo: {
+          ...action.info
+        }
       }
     case SAVE_EDUCATIONAL_INFO:
       return {
         ...state,
         educationalInfo: [
+          ...state.educationalInfo,
           action.info
         ]
       }
@@ -66,6 +39,7 @@ const userInfo = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           professionalInfo: [
+            ...state.professionalInfo,
             action.info
           ]
         }
@@ -73,6 +47,7 @@ const userInfo = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           projectsInfo: [
+            ...state.projectsInfo,
             action.info
           ]
         }
@@ -80,6 +55,7 @@ const userInfo = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           skillsInfo: [
+            ...state.skillsInfo,
             action.info
           ]
         }
