@@ -6,6 +6,7 @@ import PersonalInfo from './components/PersonalInfo'
 import ProfessionalInfo from './components/ProfessionalInfo'
 import ProjectsInfo from './components/ProjectsInfo'
 import SkillsInfo from './components/SkillsInfo'
+import generatePDF from './pdfmake/CvPdfMaker'
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,7 @@ class App extends Component {
   }
 
   render() {
+    const { userInfo } = this.props
     const { personalform, educationallform, professionalform, projectsform, skillsform } = this.state
     return (
       <main>
@@ -69,7 +71,9 @@ class App extends Component {
           </button>
         </div>
 
-
+      <button
+      onClick={() => generatePDF(userInfo)}
+      >Gerar PDF</button>
       </main>
     )
   }
