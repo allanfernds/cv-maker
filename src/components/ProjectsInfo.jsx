@@ -29,7 +29,8 @@ class ProjectsInfo extends Component {
     return (
         <form>
           <label htmlFor='projectName'> Projeto: </label>
-            <input 
+            <input
+              placeholder='Nome do projeto'   
               name='projectName'
               id='projectName'
               type="text"
@@ -38,8 +39,9 @@ class ProjectsInfo extends Component {
               required   
             />
 
-          <label htmlFor='projectDescription'> Descrição: </label>
+          <label htmlFor='projectDescription'> Descrição breve: </label>
             <textarea
+              placeholder='Ex: Um site de vendas'  
               maxLength={70}
               name='projectDescription'
               id='projectDescription'
@@ -51,6 +53,7 @@ class ProjectsInfo extends Component {
 
           <label htmlFor='projectTasks'> Tarefa realizada: </label>
             <textarea
+              placeholder='Descreva sua participação no projeto' 
               maxLength={120}
               name='projectTasks'
               id='projectTasks'

@@ -29,7 +29,8 @@ class EducationalInfo extends Component {
     return (
       <form>
       <label htmlFor='institution'> Instituição: </label>
-        <input 
+        <input
+          placeholder='Nome da instituição' 
           id='institution'
           name='institution'
           type="text"
@@ -39,7 +40,8 @@ class EducationalInfo extends Component {
         />
       
       <label htmlFor='course'> Curso: </label>
-        <input 
+        <input
+          placeholder='Nome do curso' 
           id='course'
           name='course'
           type="text"

@@ -32,7 +32,8 @@ class ProfessionalInfo extends Component {
     return (
       <form>
         <label htmlFor='company'> Empresa: </label>
-          <input 
+          <input
+            placeholder='Nome da empresa'  
             id='company'
             name='company'
             type="text"
@@ -42,7 +43,8 @@ class ProfessionalInfo extends Component {
           />
         
         <label htmlFor='office'> Cargo: </label>
-          <input 
+          <input
+            placeholder='Seu último cargo'  
             id='office'
             name='office'
             type="text"
@@ -53,6 +55,7 @@ class ProfessionalInfo extends Component {
         
         <label htmlFor='tasks'> Tarefa realizada: </label>
           <textarea
+            placeholder='Faça uma breve descrição do cargo e da suas funções'  
             maxLength={80} 
             id='tasks'
             name='tasks'

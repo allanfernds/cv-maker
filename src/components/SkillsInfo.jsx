@@ -29,7 +29,7 @@ class SkillsInfo extends Component {
       <form>
         <label htmlFor='programmingLang'>Aptidão: </label>
             <input
-              placeholder='Python, Photoshop, Word...'
+              placeholder='Ex: Python, Photoshop, Excel etc...'
               name='programmingLang'
               id='programmingLang'
               type="text"              

@@ -30,7 +30,8 @@ class PersonalInfo extends Component {
     return (
       <form>
         <label htmlFor='firstName'> Nome: </label>
-          <input 
+          <input
+            placeholder='Seu primeiro nome' 
             id='firstName'
             name='firstName'
             type="text"
@@ -40,7 +41,8 @@ class PersonalInfo extends Component {
           />
         
         <label htmlFor='lastName'> Sobrenome: </label>
-          <input 
+          <input
+            placeholder='Seu sobrenome' 
             id='lastName'
             name='lastName'
             type="text" 
@@ -50,7 +52,8 @@ class PersonalInfo extends Component {
           />
 
         <label htmlFor='email'> E-mail: </label>
-          <input 
+          <input
+            placeholder='Seu melhor email'  
             id='email'
             name='email'
             type="email" 
@@ -60,7 +63,8 @@ class PersonalInfo extends Component {
           />
 
         <label htmlFor='email'> GitHub: </label>
-          <input 
+          <input
+            placeholder='Seu GitHub (opcional)'  
             id='github'
             name='github'
             type="text" 
@@ -70,7 +74,8 @@ class PersonalInfo extends Component {
           />
 
         <label htmlFor='tel'> Telefone: </label>
-          <input 
+          <input
+            placeholder='Ex: (00) 91234-5678' 
             id='tel'
             name='tel'
             type="tel"
