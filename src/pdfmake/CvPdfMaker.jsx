@@ -46,6 +46,43 @@ const generatePDF = (data) => {
       
     ))
 
+    const professionalMap = data.professionalInfo.map((info) => (
+      [{columns: [
+        {text: info.company , 
+          fontSize: 12, 
+          alignment: 'left', 
+          bold: true, 
+          margin: [15, 0, 0, 0]
+        },
+        {
+          text: '('+ info.initialDate + ' / ' + info.finalDate +')',
+          color: 'gray', 
+          italics: true,
+          fontSize: 10,
+          alignment: 'right',
+          margin: [0, 0, 15, 0]
+        }
+    ]},
+        {
+          text: info.office, 
+          color: 'gray', 
+          fontSize: 11,
+          bold: true,
+          alignment: 'left',
+          margin: [15, 3],
+        },
+        {
+          text: info.tasks, 
+          color: 'gray',
+          fontSize: 10, 
+          alignment: 'left',
+          margin: [25, 3],
+        }
+        ,
+    
+    ]
+    ))
+
     const personalSection = [
             {columns:[
       {
@@ -79,7 +116,16 @@ const generatePDF = (data) => {
       ...educationalMap
     ];
 
-    const profesionalSection = [];
+    const profesionalSection = [
+      {
+        text: 'EXPERIÊNCIA__________________________________________________________________',
+        fontSize: 15,
+        alignment: 'left',
+        bold: true,
+        margin: [15, 15, 5, 15],
+      },
+      ...professionalMap
+    ];
 
     const projectsSection = [];
 
