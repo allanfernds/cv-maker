@@ -47,7 +47,7 @@ class App extends Component {
           <button 
             className='add-more-section-btn'
            name={'educationallform'} onClick={this.addNewFormSection}>
-            Adicionar mais uma seção
+            +
           </button>
         </div>
 
@@ -57,7 +57,7 @@ class App extends Component {
           <button 
             className='add-more-section-btn'
             name={'professionalform'} onClick={this.addNewFormSection}>
-            Adicionar mais uma seção
+            +
           </button>
         </div>
 
@@ -67,7 +67,7 @@ class App extends Component {
           <button
             className='add-more-section-btn'
             name={'projectsform'} onClick={this.addNewFormSection}>
-            Adicionar mais uma seção
+            +
           </button>
         </div>
 
@@ -77,7 +77,7 @@ class App extends Component {
           <button 
             className='add-more-section-btn'
             name={'skillsform'} onClick={this.addNewFormSection}>
-            Adicionar mais uma seção
+            +
           </button>
         </div>
 
