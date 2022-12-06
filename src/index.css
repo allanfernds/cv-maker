@@ -33,7 +33,8 @@ form {
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 7px;
   width: 90%;
   margin: 0 0 10px 0;
@@ -42,7 +43,8 @@ textarea {
 }
 
 .add-more-section-btn,
-.save-btn {
+.save-btn,
+.remove-btn {
   color: white;
   padding: 7px;
   border: 1px solid white;
@@ -55,9 +57,20 @@ textarea {
   width: 200px;
 }
 
-.add-more-section-btn {
+.add-more-section-btn,
+.remove-btn {
   margin-left: 10px;
   font-weight: 600;
   padding: 10px 13px;
   border-radius: 100%;
+}
+
+.remove-btn {
+  border: 1px solid white;
+  background-color: rgb(204, 76, 76);
+}
+
+h3 {
+  margin-left: 10px;
+  color: rgb(27, 27, 27);
 }

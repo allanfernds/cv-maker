@@ -44,41 +44,69 @@ class App extends Component {
         <div>
         <h3>Formação</h3>
         {educationallform.map((section, index) => <EducationalInfo key={index} /> )}
+          <div>
           <button 
             className='add-more-section-btn'
-           name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'educationallform'} onClick={this.addNewFormSection}>
             +
           </button>
+          <button 
+            className='remove-btn'
+            name={'educationallform'} onClick={this.addNewFormSection}>
+            x
+          </button>
+          </div>
         </div>
 
         <div>
         <h3>Experiência</h3>
         {professionalform.map((section, index) => <ProfessionalInfo key={index} /> )}
+        <div>
           <button 
             className='add-more-section-btn'
-            name={'professionalform'} onClick={this.addNewFormSection}>
+            name={'educationallform'} onClick={this.addNewFormSection}>
             +
           </button>
+          <button 
+            className='remove-btn'
+            name={'educationallform'} onClick={this.addNewFormSection}>
+            x
+          </button>
+          </div>
         </div>
 
         <div>
         <h3>Principais projetos</h3>
         {projectsform.map((section, index) => <ProjectsInfo key={index} /> )}
-          <button
+        <div>
+          <button 
             className='add-more-section-btn'
-            name={'projectsform'} onClick={this.addNewFormSection}>
+            name={'educationallform'} onClick={this.addNewFormSection}>
             +
           </button>
+          <button 
+            className='remove-btn'
+            name={'educationallform'} onClick={this.addNewFormSection}>
+            x
+          </button>
+          </div>
         </div>
 
         <div>
         <h3>Hard skills</h3>
         {skillsform.map((section, index) => <SkillsInfo key={index} /> )}
+        <div>
           <button 
             className='add-more-section-btn'
-            name={'skillsform'} onClick={this.addNewFormSection}>
+            name={'educationallform'} onClick={this.addNewFormSection}>
             +
           </button>
+          <button 
+            className='remove-btn'
+            name={'educationallform'} onClick={this.addNewFormSection}>
+            x
+          </button>
+          </div>
         </div>
 
       <button
