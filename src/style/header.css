@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2px 0;
+  background-color: #32DE8A;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  position: fixed;
+
+  -webkit-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.51);
+  -moz-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.51);
+  box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.51);
+}
