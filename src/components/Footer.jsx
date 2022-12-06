@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import '../style/header.css'
+import '../style/footer.css'
 export default class Footer extends Component {
   render() {
     return (
-      <footer><p>desenvolvido por <a target='blank' href="https://www.linkedin.com/in/alanfernds/">Alan Fernandes</a></p></footer>
+      <footer><p>developed by <a target='blank' href="https://www.linkedin.com/in/alanfernds/">Alan Fernandes</a></p></footer>
     )
   }
 }
