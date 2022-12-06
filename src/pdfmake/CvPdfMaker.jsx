@@ -131,6 +131,24 @@ const generatePDF = (data) => {
       }]}
     ];
 
+    const skillsMap = data.skillsInfo.map((info) => (
+      [
+        {
+          text: info.programmingLang , 
+          fontSize: 12, 
+          margin: [15, 1, 0, 1]
+        },
+        {
+          text: info.experienceTime + ' de experiência' ,
+          italics: true, 
+          fontSize: 11, 
+          margin: [0, 1, 0, 1]
+        },
+    ]
+    ))
+
+    //---------------------------------------------------------------
+
     const educationalSection = [
       {
         text: 'FORMAÇÃO____________________________________________________________________',
@@ -164,7 +182,24 @@ const generatePDF = (data) => {
       ...projectsMap
     ];
 
-    const skillsSection = [];
+    const skillsSection = [
+      {
+        text: 'HARD SKILLS_________________________________________________________________',
+        fontSize: 15,
+        alignment: 'left',
+        bold: true,
+        margin: [15, 15, 5, 15],
+      },
+      {
+        table: {
+          headerRows: 1,
+          widths: ['*','*','*','*',],
+          body: [...skillsMap],
+        },
+        layout: 'noBorders'
+      },
+      
+    ];
 
     const docDefinitions = {
       pageSize: 'A4',
