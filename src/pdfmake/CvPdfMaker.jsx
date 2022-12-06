@@ -4,12 +4,13 @@ import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from  'pdfmake/build/vfs_fonts';
 
 const generatePDF = (data) => {
+  console.log(data)
     const { personalInfo, educationalInfo, professionalInfo, projectsInfo, skillsInfo } = data
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
     const header = [
       {
-        text: personalInfo[0].firstName +' '+ personalInfo[0].lastName,
+        text: personalInfo.firstName +' '+ personalInfo.lastName,
         fontSize: 20,
         alignment: 'center',
         bold: true,
@@ -112,19 +113,19 @@ const generatePDF = (data) => {
     const personalSection = [
             {columns:[
       {
-        text: personalInfo[0].email,
+        text: personalInfo.email,
         fontSize: 10,
         alignment: 'left',
         margin: [15, 0],
       },
       {
-        text: personalInfo[0].tel,
+        text: personalInfo.tel,
         fontSize: 10,
         alignment: 'center',
         margin: [15, 0],
       },
       {
-        text: 'github.com/' + personalInfo[0].github,
+        text: 'github.com/' + personalInfo.github,
         fontSize: 10,
         alignment: 'right',
         margin: [15, 5 , 15, 0],

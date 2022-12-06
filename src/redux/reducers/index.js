@@ -4,7 +4,13 @@ import { SAVE_PERSONAL_INFO, SAVE_EDUCATIONAL_INFO, SAVE_PROFESSIONAL_INFO, SAVE
 
 
 const INITIAL_STATE = {
-    personalInfo: [],
+    personalInfo: {
+      firstName: '',
+      lastName: '',
+      tel: '',
+      email: '',
+      github: '',
+    },
     educationalInfo: [],  
     professionalInfo: [],   
     projectsInfo: [],
@@ -17,10 +23,9 @@ const userInfo = (state = INITIAL_STATE, action) => {
     case SAVE_PERSONAL_INFO:
       return {
         ...state,
-        personalInfo: [
-          ...state.personalInfo,
-          action.info
-        ]
+        personalInfo: {
+          ...action.info
+        }
       }
     case SAVE_EDUCATIONAL_INFO:
       return {
