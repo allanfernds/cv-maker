@@ -30,6 +30,13 @@ class App extends Component {
     console.log(this.props)
   }
 
+  removeFormSection = ({target}) => {
+    const { name } = target
+    const newArray = this.state[name]
+    newArray.pop()
+    newArray.length > 0 ? this.setState({ [name]: newArray}) : alert('Não é possivel remover')
+  }
+
   render() {
     const { userInfo } = this.props
     const { educationallform, professionalform, projectsform, skillsform } = this.state
@@ -52,7 +59,7 @@ class App extends Component {
           </button>
           <button 
             className='remove-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'educationallform'} onClick={this.removeFormSection}>
             x
           </button>
           </div>
@@ -64,12 +71,12 @@ class App extends Component {
         <div>
           <button 
             className='add-more-section-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'professionalform'} onClick={this.addNewFormSection}>
             +
           </button>
           <button 
             className='remove-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'professionalform'} onClick={this.removeFormSection}>
             x
           </button>
           </div>
@@ -81,12 +88,12 @@ class App extends Component {
         <div>
           <button 
             className='add-more-section-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'projectsform'} onClick={this.addNewFormSection}>
             +
           </button>
           <button 
             className='remove-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'projectsform'} onClick={this.removeFormSection}>
             x
           </button>
           </div>
@@ -98,12 +105,12 @@ class App extends Component {
         <div>
           <button 
             className='add-more-section-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'skillsform'} onClick={this.addNewFormSection}>
             +
           </button>
           <button 
             className='remove-btn'
-            name={'educationallform'} onClick={this.addNewFormSection}>
+            name={'skillsform'} onClick={this.removeFormSection}>
             x
           </button>
           </div>
