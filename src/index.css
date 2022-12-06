@@ -25,6 +25,7 @@ form {
   flex-direction: column;
   border-radius: 10px;
   width: 80vw;
+  max-width: 700px;
   margin: 10px;
   padding: 20px;
 
