@@ -47,7 +47,7 @@ select {
 .remove-btn {
   color: white;
   padding: 7px;
-  border: 1px solid white;
+  border: 2px solid white;
   background-color: #32DE8A;
   border-radius: 4px;
   cursor: pointer;
@@ -62,11 +62,16 @@ select {
   margin-left: 10px;
   font-weight: 600;
   padding: 10px 13px;
-  border-radius: 100%;
+  border-radius: 4px;
+}
+
+.add-more-section-btn:hover,
+.remove-btn:hover {
+  border: 2px solid rgb(61, 61, 61);
+  color: rgb(61, 61, 61);
 }
 
 .remove-btn {
-  border: 1px solid white;
   background-color: rgb(204, 76, 76);
 }
 

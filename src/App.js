@@ -47,7 +47,7 @@ class App extends Component {
           <h3>Sobre você</h3>
         <PersonalInfo />
         </div>
-
+        
         <div>
         <h3>Formação</h3>
         {educationallform.map((section, index) => <EducationalInfo key={index} /> )}
@@ -63,6 +63,7 @@ class App extends Component {
             x
           </button>
           </div>
+          <br/>
         </div>
 
         <div>
@@ -80,6 +81,7 @@ class App extends Component {
             x
           </button>
           </div>
+          <br/>
         </div>
 
         <div>
@@ -97,6 +99,7 @@ class App extends Component {
             x
           </button>
           </div>
+          <br/>
         </div>
 
         <div>
@@ -114,6 +117,7 @@ class App extends Component {
             x
           </button>
           </div>
+          <br/>
         </div>
 
       <button
