@@ -15,7 +15,7 @@ class DevCvMakerForm extends Component {
 
     this.state = {
       personalform: [{ section: '' }],
-      educationallform: [{ section: '' }],
+      educationalform: [{ section: '' }],
       professionalform: [{ section: '' }],
       projectsform: [{ section: '' }],
       skillsform: [{ section: '' }],
@@ -38,12 +38,18 @@ class DevCvMakerForm extends Component {
     newArray.length > 0 ? this.setState({ [name]: newArray }) : alert('Não é possivel remover')
   }
 
-  render() {
+  pdfGenerateAndReload = () => {
     const { userInfo } = this.props
-    const { educationallform, professionalform, projectsform, skillsform } = this.state
+    generatePDF(userInfo)
+    setTimeout(() => {
+      document.location.reload();
+    }, 3000);
+  }
+
+  render() {
+    const { educationalform, professionalform, projectsform, skillsform } = this.state
     return (
       <main>
-
         <div>
           <h3>Sobre você</h3>
           <PersonalInfo />
@@ -52,7 +58,7 @@ class DevCvMakerForm extends Component {
 
         <div>
           <h3>Formação</h3>
-          {educationallform.map((section, index) => <EducationalInfo key={index} />)}
+          {educationalform.map((section, index) => <EducationalInfo key={index} />)}
           <Button name='educationalform' addSection={this.addNewFormSection} removeSection={this.removeFormSection} />
           <br />
         </div>
@@ -67,7 +73,7 @@ class DevCvMakerForm extends Component {
         <div>
           <h3>Principais projetos</h3>
           {projectsform.map((section, index) => <ProjectsInfo key={index} />)}
-          <Button name='projectssform' addSection={this.addNewFormSection} removeSection={this.removeFormSection} />
+          <Button name='projectsform' addSection={this.addNewFormSection} removeSection={this.removeFormSection} />
           <br />
         </div>
 
@@ -79,10 +85,11 @@ class DevCvMakerForm extends Component {
         </div>
 
         <button
+          type='submit'
           className='generatepdf-btn'
-          onClick={() => generatePDF(userInfo)}
+          onClick={() => this.pdfGenerateAndReload()}
         >Gerar PDF</button>
-      </main>
+      </main >
     )
   }
 }
