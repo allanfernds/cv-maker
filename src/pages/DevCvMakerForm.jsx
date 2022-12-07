@@ -30,7 +30,7 @@ class DevCvMakerForm extends Component {
     }))
     console.log(this.props)
   }
-  ssssss
+
   removeFormSection = ({ target }) => {
     const { name } = target
     const newArray = this.state[name]
@@ -38,12 +38,18 @@ class DevCvMakerForm extends Component {
     newArray.length > 0 ? this.setState({ [name]: newArray }) : alert('Não é possivel remover')
   }
 
-  render() {
+  pdfGenerateAndReload = () => {
     const { userInfo } = this.props
+    generatePDF(userInfo)
+    setTimeout(() => {
+      document.location.reload();
+    }, 3000);
+  }
+
+  render() {
     const { educationalform, professionalform, projectsform, skillsform } = this.state
     return (
       <main>
-
         <div>
           <h3>Sobre você</h3>
           <PersonalInfo />
@@ -79,10 +85,11 @@ class DevCvMakerForm extends Component {
         </div>
 
         <button
+          type='submit'
           className='generatepdf-btn'
-          onClick={() => generatePDF(userInfo)}
+          onClick={() => this.pdfGenerateAndReload()}
         >Gerar PDF</button>
-      </main>
+      </main >
     )
   }
 }
