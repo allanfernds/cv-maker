@@ -30,7 +30,7 @@ class DevCvMakerForm extends Component {
     }))
     console.log(this.props)
   }
-
+  ssssss
   removeFormSection = ({ target }) => {
     const { name } = target
     const newArray = this.state[name]
