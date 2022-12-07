@@ -44,6 +44,13 @@ select {
   border: 1px solid rgb(194, 194, 194);
 }
 
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: #32DE8A;
+}
+
 .add-more-section-btn,
 .save-btn,
 .remove-btn,
@@ -61,6 +68,7 @@ select {
   width: 100%;
 }
 
+
 .add-more-section-btn,
 .remove-btn {
   font-size: 0.7rem;
@@ -70,8 +78,9 @@ select {
 }
 
 .add-more-section-btn:hover,
-.remove-btn:hover {
-  border: 2px solid rgb(85, 193, 255);
+.remove-btn:hover,
+.save-btn:hover {
+  border: 2px solid rgb(48, 167, 236);
 }
 
 .remove-btn {
@@ -96,6 +105,7 @@ select {
 }
 
 h3 {
+  font-size: 1.4rem;
   margin-left: 10px;
-  color: rgb(27, 27, 27);
+  color: rgb(68, 68, 68);
 }
