@@ -15,7 +15,7 @@ class DevCvMakerForm extends Component {
 
     this.state = {
       personalform: [{ section: '' }],
-      educationallform: [{ section: '' }],
+      educationalform: [{ section: '' }],
       professionalform: [{ section: '' }],
       projectsform: [{ section: '' }],
       skillsform: [{ section: '' }],
@@ -40,7 +40,7 @@ class DevCvMakerForm extends Component {
 
   render() {
     const { userInfo } = this.props
-    const { educationallform, professionalform, projectsform, skillsform } = this.state
+    const { educationalform, professionalform, projectsform, skillsform } = this.state
     return (
       <main>
 
@@ -52,7 +52,7 @@ class DevCvMakerForm extends Component {
 
         <div>
           <h3>Formação</h3>
-          {educationallform.map((section, index) => <EducationalInfo key={index} />)}
+          {educationalform.map((section, index) => <EducationalInfo key={index} />)}
           <Button name='educationalform' addSection={this.addNewFormSection} removeSection={this.removeFormSection} />
           <br />
         </div>
@@ -67,7 +67,7 @@ class DevCvMakerForm extends Component {
         <div>
           <h3>Principais projetos</h3>
           {projectsform.map((section, index) => <ProjectsInfo key={index} />)}
-          <Button name='projectssform' addSection={this.addNewFormSection} removeSection={this.removeFormSection} />
+          <Button name='projectsform' addSection={this.addNewFormSection} removeSection={this.removeFormSection} />
           <br />
         </div>
 
